@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Event{% endblock title %}
+
+{% block body %}
+
+<div class="conatiner">
+    <h3 class="my-3">Add Event</h3>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="eventName" class="form-label">Event Name</label>
+            <input name="name" type="name" class="form-control" id="eventName">
+        </div>
+        <div class="mb-3">
+            <label for="eventDate" class="form-label">Event Date</label>
+            <input name="date" type="date" class="form-control" id="eventDate">
+        </div>
+        <div class="mb-3">
+            <label for="eventTime" class="form-label">Event Time</label>
+            <input name="time" type="time" class="form-control" id="eventTime">
+        </div>
+        <div class="mb-3">
+            <label for="eventLocation" class="form-label">Event Location</label>
+            <textarea name="location" class="form-control" id="eventLocation" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Event Image</label>
+            <input name="image" class="form-control" type="file" id="formFile">
+          </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,12 @@
+body{
+    background-color: wheat;
+}
+
+.btn-like{
+    color: red;
+}
+
+.alert-error{
+    background-color: tomato;
+    color: red;
+}
